@@ -60,7 +60,7 @@ question = "How to register a model on databricks?"
 
 # DBTITLE 1,Retrieve Relevant Documents
 # open vector store to access embeddings
-embeddings = OpenAIEmbeddings(model=config['openai_embedding_model'])
+embeddings = OpenAIEmbeddings(model='text-embedding-3-large')
 vector_store = FAISS.load_local(embeddings=embeddings, folder_path=config['vector_store_path'])
 
 # configure document retrieval 
